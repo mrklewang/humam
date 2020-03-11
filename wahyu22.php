@@ -81,13 +81,8 @@ function change(){
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
-        $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
-        echo "\n".color("green","+] Message: ".$message);
-        goto gofood;
-        }else{
-        echo "\n".color("red","-] Message: ".$message);
+ 
+
         reff:
         $data = '{"referral_code":"G-75SR565"}';    
         $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
