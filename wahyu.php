@@ -1,11 +1,11 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
-echo color("yellow","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
-echo color("yellow","[•]              waiting proses.....           \n");
-echo color("yellow","[•] cara menulis nomor pakai 62xxxxxxxxxx \n");
-echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
+echo color("red","# # # # # # # # # # # # # # # # # # # # # # # \n");
+echo color("green","[•]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
+echo color("yellow","[•]              sabar kau bodat \n");
+echo color("red","[•] input nomor pakai 62xxxxxxxxxx \n");
+echo color("yellow","# # # # # # # # # # # # # # # # # # # # # # # \n");
 function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
@@ -46,8 +46,8 @@ function change(){
         }else{
         echo "\n".color("red","-] Message: ".$message);
         gocar:
-        echo "\n".color("yellow","!] Claim voc GOFOOD 15+10+5");
-        echo "\n".color("yellow","!] Please wait");
+        echo "\n".color("red","!] Claim voc GOFOOD 15+10+5");
+        echo "\n".color("red","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(20);
@@ -70,8 +70,8 @@ function change(){
         echo "\n".color("red","-] Message: ".$message);
         }
         gofood:
-        echo "\n".color("yellow","!] Claim voc MAKAN 15+10");
-        echo "\n".color("yellow","!] Please wait");
+        echo "\n".color("red","!] Claim voc MAKAN 15+10");
+        echo "\n".color("red","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(10);
@@ -108,7 +108,7 @@ function change(){
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("red","========( PIN ANDA = 332211 )========")."\n";
+         echo color("green","========( PIN ANDA = 332211 )========")."\n";
          $data2 = '{"pin":"332211"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          echo "Otp set pin: ";
